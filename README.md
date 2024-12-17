@@ -33,6 +33,7 @@ Guide:
     3. Install Qemu Guest Agent (virtio-win iso with drivers at "https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md" - guest agent is in the guest-agent folder)
     4. Edit the scripts as needed to have the correct paths in windows / linux, as well as correct vm names.
     5. Add a new schedule in task scheduler (Create Basic Task->Name: "Run Fetch"->daily->next->Start a program next->Program/script field: "C:\get-temps\nircmd.exe C:\get-temps\nircmd.exe exec hide C:\get-temps\run.bat"->next->hit yes->Finish)
+    6. Run 'loop_write_temp.sh'
     7. Now create the custom sensors in CoolerControl for the Hotspot located at /tmp/gpu_hotspot_temperature.txt
 
 Many thanks to the guy who wrote https://gist.github.com/jpsutton/8734ce209f7874d5e386d2865c1adc8a , chatgpt and the example programs from the adlx library
